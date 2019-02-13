@@ -14,16 +14,21 @@
 
 */
 
+// This variable saves a value using the random Integer function, anywhere from 1-10, while being an integer
 var randomQ = randomInt(0, 10);
 
+// This function creates a random integer from 1-10, with the parameters of lowest and size
 function randomInt(lowest, size) {
     return Math.floor(Math.random() * 10)
 }
 
+// The variable finds the first element called quote
 var quoteElem = document.getElementsByTagName("quote")[0];
 
+// This will modify the first quote element, and insert a random quote using the below getquote function
 quoteElem.innerHTML = getQuote(randomQ);
 
+// this function has a collection of quotes that are used depending on a randomly selected number
 function getQuote(n) {
     var quotes = [
         "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.",
